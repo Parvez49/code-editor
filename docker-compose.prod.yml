@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
+
+  # for large scale project
+  # nginx:
+  #   image: nginx:stable-alpine
+  #   ports:
+  #     - "80:80"
+  #   depends_on:
+  #     - app
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/conf.d/default.conf
+

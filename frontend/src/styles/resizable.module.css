@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.panel {
+    overflow: auto;
+}
+
+.resizer {
+    width: 5px;
+    background: #ccc;
+    cursor: ew-resize;
+    z-index: 1;
+    position: relative;
+}
