@@ -8,6 +8,8 @@ export default function ResizableLayout({ panels }) {
         Array(panels.length).fill(1 / panels.length) // Equal division initially
     );
 
+    console.log(sizes);
+
     const containerRef = useRef(null);
 
     const handleMouseDown = (event, index) => {
